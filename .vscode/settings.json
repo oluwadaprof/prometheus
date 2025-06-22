@@ -1,0 +1,10 @@
+{
+	"workbench.settings.useSplitJSON": true,
+	"workbench.settings.editor": "ui",
+	"workbench.settings.openDefaultSettings": true,
+	"biome.lsp.bin": null,
+	"editor.codeActionsOnSave": {
+		"source.action.useSortedKeys.biome": "explicit",
+		"source.fixAll.biome": "explicit"
+	}
+}

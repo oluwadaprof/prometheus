@@ -1,0 +1,144 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.0.0-beta.6/schema.json",
+	"vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
+	"files": { "ignoreUnknown": false, "includes": ["src/app/**", "src/panda-ds-ui/**", "src/components/**"] },
+	"formatter": {
+		"enabled": true,
+		"useEditorconfig": false,
+		"formatWithErrors": false,
+		"indentStyle": "tab",
+		"indentWidth": 2,
+		"lineEnding": "lf",
+		"lineWidth": 120,
+		"attributePosition": "auto",
+		"bracketSpacing": true,
+		"includes": [
+			"**",
+			"!**/.next",
+			"!**/.husky",
+			"!**/.storybook",
+			"!**/.dependency-cruiser.js",
+			"!**/node_modules",
+			"!**/build",
+			"!**/src/panda-ds-ui/styled-system"
+		]
+	},
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": {
+					"options": {
+						"groups": [
+							"@panda-ds-constants/**",
+							"@panda-ds-lib/**",
+							"@panda-ds-modules/**",
+							"@panda-ds-types/**",
+							"@panda-ds-ui/**",
+							"@panda-ds-utils/**",
+							":BLANK_LINE:",
+							"./**",
+							"../**"
+						]
+					}
+				}
+			}
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": false,
+			"a11y": { "useValidAnchor": "error" },
+			"complexity": {
+				"noBannedTypes": "error",
+				"noUselessTypeConstraint": "error",
+				"noArguments": "error"
+			},
+			"correctness": {
+				"noPrecisionLoss": "error",
+				"noUnusedVariables": "error",
+				"useExhaustiveDependencies": "off",
+				"noUnusedImports": "error",
+				"noUnusedFunctionParameters": "error",
+				"useJsxKeyInIterable": "error",
+				"noConstAssign": "off",
+				"noGlobalObjectCalls": "off",
+				"noInvalidConstructorSuper": "off",
+				"noSetterReturn": "off",
+				"noUndeclaredVariables": "off",
+				"noUnreachable": "off",
+				"noUnreachableSuper": "off",
+				"noInvalidBuiltinInstantiation": "off",
+				"useValidTypeof": "off"
+			},
+			"style": {
+				"noInferrableTypes": "error",
+				"noNamespace": "error",
+				"noNonNullAssertion": "warn",
+				"useAsConstAssertion": "error",
+				"useBlockStatements": "off",
+				"useConst": "error",
+				"useArrayLiterals": "off"
+			},
+			"suspicious": {
+				"noConsole": "error",
+				"noEmptyBlockStatements": "error",
+				"noExplicitAny": "off",
+				"noExtraNonNullAssertion": "error",
+				"noMisleadingInstantiator": "error",
+				"useNamespaceKeyword": "error",
+				"noDuplicateClassMembers": "off",
+				"noDuplicateObjectKeys": "off",
+				"noDuplicateParameters": "off",
+				"noFunctionAssign": "off",
+				"noImportAssign": "off",
+				"noRedeclare": "off",
+				"noUnsafeNegation": "off",
+				"useGetterReturn": "off",
+				"noVar": "error"
+			}
+		},
+		"includes": [
+			"src/app/**",
+			"src/panda-ds-ui/**",
+			"src/components/**",
+			"!**/.next",
+			"!**/.husky",
+			"!**/.storybook",
+			"!**/.dependency-cruiser.js",
+			"!**/node_modules",
+			"!**/build",
+			"!**/src/panda-ds-ui/styled-system"
+		]
+	},
+	"javascript": {
+		"formatter": {
+			"jsxQuoteStyle": "double",
+			"quoteProperties": "asNeeded",
+			"trailingCommas": "none",
+			"semicolons": "asNeeded",
+			"arrowParentheses": "always",
+			"bracketSameLine": false,
+			"quoteStyle": "single",
+			"attributePosition": "auto",
+			"bracketSpacing": true
+		}
+	},
+	"overrides": [
+		{
+			"linter": {
+				"rules": {
+					"style": { "noNonNullAssertion": "off" }
+				}
+			}
+		},
+		{
+			"includes": [
+				"**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
+				"**/*.story.@(ts|tsx|js|jsx|mjs|cjs)",
+				"**/.storybook/main.@(js|cjs|mjs|ts)"
+			],
+			"linter": { "rules": {} }
+		}
+	]
+}

@@ -40,8 +40,6 @@ export const globalCss = defineGlobalStyles({
 		cursor: 'pointer'
 	},
 
-
-
 	/* To control scrollbars on different browsers */
 	'::-webkit-scrollbar': {
 		w: '0.2rem',
