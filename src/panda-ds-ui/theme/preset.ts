@@ -11,7 +11,9 @@ import { opacity } from './opacity'
 
 import { semanticShadows, shadows } from './shadows'
 import { sizes } from './sizes'
+import { radii } from './radii'
 import { spacing } from './spacing'
+import { glass } from './translucence'
 import { fontSizes, fontWeights, fonts, letterSpacings, lineHeights, textStyles } from './typography'
 
 export const pandadsui = definePreset({
@@ -34,6 +36,7 @@ export const pandadsui = definePreset({
 			lineHeights,
 			gradients,
 			opacity,
+			radii,
 			shadows,
 			sizes,
 			spacing
@@ -47,5 +50,8 @@ export const pandadsui = definePreset({
 			breakpoints,
 			keyframes
 		}
+	},
+	utilities: {
+		glass
 	}
 })

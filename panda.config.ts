@@ -34,5 +34,5 @@ export default defineConfig({
   polyfill: true,
 
   // The output dir map
-  importMap: "@panda-ds/styled-system",
+  importMap: "@panda-ds-ui/styled-system",
 });
