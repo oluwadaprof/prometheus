@@ -560,6 +560,51 @@ const initials = getNameInitials('Jane Doe') // "JD"
 
 ---
 
+## 🎨 How to Change the Brand Color / Theme
+
+Want to quickly update your project's brand color? Just follow these steps:
+
+<div style="background:#F1F5F9; border-radius:1.5rem; border:2px solid #6366F1; padding:1.5rem; font-family:'Fira Mono', 'Menlo', 'Consolas', monospace; font-size:1rem; margin-bottom:1.5rem;">
+
+1. **Open the theme colors file:**
+   ```
+   src/panda-ds-ui/theme/colors.ts
+   ```
+
+2. **Find the `primary` color group:**
+   ```ts
+   export const colors = defineTokens.colors({
+     // ...
+     primary: {
+       1: { value: 'rgba(252, 252, 255, 1)' },
+       2: { value: 'rgba(247, 248, 255, 1)' },
+       // ...
+       9: { value: 'rgba(12, 104, 195, 1)' }, // <-- Main brand color
+       // ...
+     },
+     // ...
+   })
+   ```
+
+3. **Change the value of `primary.9` (and optionally other shades) to your new brand color:**
+   ```ts
+   primary: {
+     // ...
+     9: { value: 'rgba(255, 0, 0, 1)' }, // Red as the new brand color
+     // ...
+   }
+   ```
+
+4. **Save the file and restart your dev server if needed.**
+
+5. **Your UI will now use the new brand color everywhere `primary` is referenced!**
+
+</div>
+
+For more advanced theming (e.g., dark mode, semantic tokens, or adding new color palettes), see [`src/panda-ds-ui/theme/README.md`](./theme/README.md).
+
+---
+
 ## Contributing
 
 - Follow the code style enforced by the linter and formatter.
