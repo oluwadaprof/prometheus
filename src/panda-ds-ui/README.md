@@ -1,103 +1,125 @@
 # 🐼 Panda DS UI – Primitives & Utilities Guide
 
-Welcome to the Panda Design System UI library! This guide will help you get started with the UI primitives, icons, and utility functions available in this project. It’s designed for new developers joining the project.
+<div align="center" style="font-size:1.2rem; color:#4F46E5; font-family:'Inter', 'Segoe UI', Arial, sans-serif; margin-bottom:2rem;">
+  <strong>Welcome to the Panda Design System UI library!</strong><br/>
+  <span style="color:#64748B;">A beautiful, modern, and flexible UI toolkit for your next project.</span>
+</div>
 
 ---
 
-## Table of Contents
+## <span style="color:#6366F1;">📦 Table of Contents</span>
 
 - [Getting Started](#getting-started)
 - [Primitives Usage](#primitives-usage)
-  - [Avatar](#avatar)
-  - [Badge](#badge)
-  - [Button](#button)
-  - [Email Input](#email-input)
-  - [Form](#form)
-  - [Framer Animations](#framer-animations)
-  - [Hover Card](#hover-card)
-  - [Image](#image)
-  - [Keyboard Shortcut](#keyboard-shortcut)
-  - [Label](#label)
-  - [Layout](#layout)
-  - [Link](#link)
-  - [List](#list)
-  - [Loaders (Spinner)](#loaders-spinner)
-  - [Pin Input](#pin-input)
-  - [Popover](#popover)
-  - [Radio Group](#radio-group)
-  - [Star Rating](#star-rating)
-  - [Tabs](#tabs)
-  - [Text](#text)
-  - [Tooltip](#tooltip)
+  - [Avatar 🧑‍🎨](#avatar)
+  - [Badge 🏷️](#badge)
+  - [Button 🔘](#button)
+  - [Email Input 📧](#email-input)
+  - [Form 📝](#form)
+  - [Framer Animations 🎞️](#framer-animations)
+  - [Hover Card 🪄](#hover-card)
+  - [Image 🖼️](#image)
+  - [Keyboard Shortcut ⌨️](#keyboard-shortcut)
+  - [Label 🏷️](#label)
+  - [Layout 📐](#layout)
+  - [Link 🔗](#link)
+  - [List 📝](#list)
+  - [Loaders (Spinner) 🌀](#loaders-spinner)
+  - [Pin Input 🔢](#pin-input)
+  - [Popover 💬](#popover)
+  - [Radio Group 🔘](#radio-group)
+  - [Star Rating ⭐](#star-rating)
+  - [Tabs 🗂️](#tabs)
+  - [Text 📝](#text)
+  - [Tooltip 💡](#tooltip)
 - [Icons Usage](#icons-usage)
 - [Utilities](#utilities)
-  - [Color Utils](#color-utils)
-  - [Text Utils](#text-utils)
+  - [Color Utils 🎨](#color-utils)
+  - [Text Utils ✂️](#text-utils)
 - [Scripts](#scripts)
-  - [Formatting](#formatting)
-  - [Linting](#linting)
+  - [Formatting 🧹](#formatting)
+  - [Linting 🕵️‍♂️](#linting)
 - [Contributing](#contributing)
 
 ---
 
-## Getting Started
+## <span style="color:#6366F1;">🚀 Getting Started</span>
 
-1. **Install dependencies:**
-   ```bash
-   pnpm install
-   # or
-   npm install
-   ```
+<div style="background:#F1F5F9; border-radius:1.5rem; border:2px solid #6366F1; padding:1.5rem; font-family:'Fira Mono', 'Menlo', 'Consolas', monospace; font-size:1rem; margin-bottom:1.5rem;">
 
-2. **Import primitives in your components:**
-   ```tsx
-   import { Button } from '@/panda-ds-ui/primitives/button'
-   ```
-
----
-
-## Primitives Usage
-
-### Avatar
-
-```tsx
-import { Avatar, AvatarGroup } from '@/panda-ds-ui/primitives/avatar'
-
-<Avatar name="Jane Doe" image="https://example.com/jane.jpg" size="md" shape="full" />
-<AvatarGroup max={3}>
-  <Avatar name="A" />
-  <Avatar name="B" />
-  <Avatar name="C" />
-  <Avatar name="D" />
-</AvatarGroup>
+```bash
+pnpm install
+# or
+npm install
 ```
 
-- **Props:** `name`, `image`, `size`, `shape`, `imageClassName`, `fallbackClassName`
-- **AvatarGroup:** `max` (max avatars to show), `size`, `shape`
+</div>
 
----
+Import primitives in your components:
 
-### Badge
-
-```tsx
-import { Badge } from '@/panda-ds-ui/primitives/badge'
-
-<Badge look="solid" size="md">New</Badge>
-```
-
-- **Variants:** `look` (`solid`, `soft`, `outline`), `size` (`lg`, `md`, `sm`, `xs`)
-
----
-
-### Button
+<div style="background:#F1F5F9; border-radius:1.5rem; border:2px solid #6366F1; padding:1.5rem; font-family:'Fira Mono', 'Menlo', 'Consolas', monospace; font-size:1rem; margin-bottom:1.5rem;">
 
 ```tsx
 import { Button } from '@/panda-ds-ui/primitives/button'
-
-<Button isLoading>Submit</Button>
 ```
 
-- **Props:** `isLoading`, `isDisabled`, `loadingText`, `shortcut`, etc.
+</div>
+
+---
+
+## <span style="color:#6366F1;">🧩 Primitives Usage</span>
+
+### <span style="color:#F59E42;">Button 🔘</span>
+
+**All Props:**
+- All native `<button>` props (e.g., `onClick`, `type`, etc.)
+- `isLoading?: boolean`
+- `isDisabled?: boolean`
+- `loadingText?: string`
+- `tooltipContentProps?: TooltipContentProps`
+- `tooltipChildren?: React.ReactNode`
+- `shortcut?: React.ReactNode`
+- **Variants:**
+  - `look?: 'form' | 'ghost' | 'solid' | 'soft' | 'outline' | 'underline' | 'transparent'` (default: `'solid'`)
+  - `size?: 'md' | 'sm' | 'xs' | 'attribute' | 'auto'` (default: `'sm'`)
+  - `use?: 'link' | 'button'` (default: `'button'`)
+- **Style props:** All [JsxStyleProps](https://panda-css.com/docs/styling/jsx-prop) (e.g., `p`, `mx`, `color`, `bg`, `rounded`, `fontWeight`, `h`, `w`, etc.)
+
+**Default Styling:**
+```tsx
+<Button>
+  Default Button
+</Button>
+```
+- Rounded: `xl`
+- Font weight: `500`
+- Padding: `px: 1.5` (sm), `px: 3.2` (md)
+- Height: `3.2rem` (sm), `3.8rem` (md)
+- Color: `brand.grayA`
+- Display: `inline-flex`, `alignItems: center`, `justifyContent: center`
+
+**Minified Style Props Example:**
+```tsx
+<Button p="1" mx="2" color="red.9" bg="gray.2" rounded="md" fontWeight="bold">
+  Custom Spacing
+</Button>
+```
+
+**Custom Style Example:**
+```tsx
+import { css } from '@panda-ds-ui/styled-system/css'
+
+<Button className={css({ bg: 'blue.6', color: 'white', px: '4', py: '2', border: '2px solid #333', boxShadow: 'md', letterSpacing: '0.1em' })}>
+  Custom Styled Button
+</Button>
+```
+
+**Inline Style Example:**
+```tsx
+<Button style={{ background: 'linear-gradient(to right, #e66465, #9198e5)', borderRadius: 12, fontSize: 18 }}>
+  Gradient Button
+</Button>
+```
 
 ---
 
@@ -237,10 +259,36 @@ import { Image } from '@/panda-ds-ui/primitives/image'
 
 ### Keyboard Shortcut
 
-```tsx
-import { KeyboardShortcut } from '@/panda-ds-ui/primitives/keyboard-shortcut'
+**All Props:**
+- `size?: 'md' | 'sm' | 'xs' | 'attribute' | 'auto'` (default: `'sm'`)
+- All style props (e.g., `px`, `py`, `gap`, `opacity`, `rounded`, `my`, etc.)
 
-<KeyboardShortcut>Ctrl + S</KeyboardShortcut>
+**Default Styling:**
+- Display: `flex`
+- Padding: `px: 0.5`, `py: 1px`
+- Gap: `0.5`
+- Opacity: `0.8`
+- Rounded: `sm` (default)
+
+**Minified Style Example:**
+```tsx
+<KeyboardShortcut px="1" py="0.5" rounded="md" gap="2" opacity="1">
+  ⌘K
+</KeyboardShortcut>
+```
+
+**Custom Style Example:**
+```tsx
+<KeyboardShortcut className={css({ bg: 'gray.2', color: 'gray.11', px: '2', py: '1', border: '1px solid #ccc', borderRadius: 6 })}>
+  Custom Shortcut
+</KeyboardShortcut>
+```
+
+**Inline Style Example:**
+```tsx
+<KeyboardShortcut style={{ background: '#eee', color: '#333', padding: '2px 8px', borderRadius: 4 }}>
+  Inline
+</KeyboardShortcut>
 ```
 
 ---
@@ -257,13 +305,34 @@ import { Label } from '@/panda-ds-ui/primitives/label'
 
 ### Layout
 
-```tsx
-import { Box, Flex } from '@/panda-ds-ui/primitives/layout'
+**All Props:**
+- All style props (e.g., `p`, `mx`, `color`, `bg`, `rounded`, `fontSize`, `w`, `h`, `align`, `justify`, etc.)
 
-<Flex align="center" justify="between">
-  <Box>Left</Box>
-  <Box>Right</Box>
+**Default Styling:**
+- Varies by primitive (e.g., `Flex`, `Box`, `VStack`, etc.)
+
+**Minified Style Example:**
+```tsx
+<Flex p="2" mx="auto" align="center" justify="between" gap="4" bg="gray.2">
+  <Box p="1" bg="white">Left</Box>
+  <Box p="1" bg="white">Right</Box>
 </Flex>
+```
+
+**Custom Style Example:**
+```tsx
+<VStack className={css({ gap: '2', alignItems: 'flex-start', bg: 'blue.1', p: '4', borderRadius: 'lg' })}>
+  <Box>Item 1</Box>
+  <Box>Item 2</Box>
+</VStack>
+```
+
+**Inline Style Example:**
+```tsx
+<Stack style={{ background: '#fafafa', padding: 16, borderRadius: 8, gap: 8 }}>
+  <Box>Stacked 1</Box>
+  <Box>Stacked 2</Box>
+</Stack>
 ```
 
 ---
@@ -280,13 +349,34 @@ import { NextLink } from '@/panda-ds-ui/primitives/link'
 
 ### List
 
-```tsx
-import { List } from '@/panda-ds-ui/primitives/list'
+**All Props:**
+- All native `<ul>`, `<ol>`, `<li>` props
+- `look?: 'ordered' | 'unordered'`
+- All style props (e.g., `mb`, `p`, `color`, `fontSize`, etc.)
 
-<List>
-  <li>Item 1</li>
-  <li>Item 2</li>
-</List>
+**Default Styling:**
+- Margin bottom: `1.5`
+- List style: `decimal` (ordered), `disc` (unordered)
+
+**Minified Style Example:**
+```tsx
+<Li look="unordered" mb="2" p="1" color="gray.10" fontSize="1.5">
+  List item
+</Li>
+```
+
+**Custom Style Example:**
+```tsx
+<Li className={css({ color: 'red.8', fontWeight: 'bold', fontSize: '2', px: '2', py: '1' })}>
+  Custom list item
+</Li>
+```
+
+**Inline Style Example:**
+```tsx
+<Li style={{ color: '#333', fontSize: 18, padding: '4px 12px', background: '#f0f0f0' }}>
+  Inline styled list item
+</Li>
 ```
 
 ---
@@ -364,15 +454,33 @@ import { TabsList, TabTrigger, TabContent } from '@/panda-ds-ui/primitives/tabs'
 
 ### Text
 
-```tsx
-import { Text, Heading, Span, Pre, Code, Kbd } from '@/panda-ds-ui/primitives/text'
+**All Props:**
+- All native text element props (e.g., `<p>`, `<span>`, `<pre>`, `<code>`, `<kbd>`)
+- `maxLines?: number`
+- All style props (e.g., `color`, `fontWeight`, `fontSize`, `p`, `mx`, etc.)
 
-<Heading as="h1">Title</Heading>
-<Text maxLines={2}>Some text</Text>
-<Span>Inline</Span>
-<Pre>Preformatted</Pre>
-<Code>const a = 1</Code>
-<Kbd>Ctrl+C</Kbd>
+**Default Styling:**
+- Inherits from styled system, can be customized
+
+**Minified Style Example:**
+```tsx
+<Text p="1" color="gray.11" maxLines={2} fontWeight="bold" fontSize="2">
+  Truncated bold text
+</Text>
+```
+
+**Custom Style Example:**
+```tsx
+<Text className={css({ fontWeight: 'bold', fontSize: '2', color: 'blue.10', letterSpacing: '0.05em' })}>
+  Custom styled text
+</Text>
+```
+
+**Inline Style Example:**
+```tsx
+<Text style={{ color: '#e66465', fontSize: 20, fontWeight: 700, padding: 8 }}>
+  Inline styled text
+</Text>
 ```
 
 ---
@@ -406,7 +514,7 @@ import { SomeIcon } from '@/panda-ds-ui/icons/base'
 
 ## Utilities
 
-### Color Utils
+### Color Utils 🎨
 
 ```ts
 import { stringToDesignSystemColor } from '@/utils/colors'
@@ -417,7 +525,7 @@ const color = stringToDesignSystemColor('Jane Doe')
 
 ---
 
-### Text Utils
+### Text Utils ✂️
 
 ```ts
 import { getNameInitials } from '@/utils/text'
@@ -430,7 +538,7 @@ const initials = getNameInitials('Jane Doe') // "JD"
 
 ## Scripts
 
-### Formatting
+### Formatting 🧹
 
 - **Format code:**  
   ```bash
@@ -440,7 +548,7 @@ const initials = getNameInitials('Jane Doe') // "JD"
   ```
 - Uses Prettier for code formatting.
 
-### Linting
+### Linting 🕵️‍♂️
 
 - **Lint code:**  
   ```bash
