@@ -12,7 +12,7 @@ import { JsxStyleProps } from '@panda-ds-ui/styled-system/types'
 import { styled } from '@panda-ds-ui/styled-system/jsx'
 import { KeyboardShortcut } from '../keyboard-shortcut'
 
-export const buttonStyleV2 = cva({
+export const buttonVariantStyle = cva({
 	base: {
 		boxSizing: 'border-box',
 		rounded: 'xl',
@@ -197,9 +197,9 @@ export const buttonStyleV2 = cva({
 	}
 })
 
-const StyledButton = styled('button', buttonStyleV2)
+const StyledButton = styled('button', buttonVariantStyle)
 
-export type ButtonVariants = RecipeVariantProps<typeof buttonStyleV2>
+export type ButtonVariants = RecipeVariantProps<typeof buttonVariantStyle>
 
 export type ButtonProps = {
 	isLoading?: boolean
